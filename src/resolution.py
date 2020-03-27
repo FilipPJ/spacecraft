@@ -25,4 +25,11 @@ def calculate_diffracion_limit(wavelength: float, distance: float, diameter: flo
 class TestDiffraction(unittest.TestCase):
 
     def test_diff(self):
-        print(calculate_diffracion_limit(545, 200, 8))
+        limit = calculate_diffracion_limit(545, 200, 8)
+        logging.info(f"Resolution: {limit}")
+
+    def test_diff_array(self):
+        dist = np.array([200, 300])
+        dia = 8
+        limit = calculate_diffracion_limit(545, dist, dia)
+        logging.info(f"Resolution: {limit}")
