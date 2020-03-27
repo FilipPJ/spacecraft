@@ -1,11 +1,12 @@
 import matplotlib.pyplot as plt
 import unittest 
 import logging
+import numpy as np
 
 logging.basicConfig(level=logging.DEBUG)
 
 
-def calculate_diffracion_limit(wavelength: float, distance: float, diameter: float):
+def calculate_diffracion_limit(wavelength: float, distance: float, diameter: float) -> float:
     """
     wavelength [nm]
     distance [km] - from telescope fo earth
