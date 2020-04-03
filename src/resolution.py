@@ -33,3 +33,6 @@ class TestDiffraction(unittest.TestCase):
         dia = 8
         limit = calculate_diffracion_limit(545, dist, dia)
         logging.info(f"Resolution: {limit}")
+
+if __name__ == '__main__':
+    unittest.main()
