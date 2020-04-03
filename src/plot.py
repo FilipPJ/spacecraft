@@ -6,18 +6,20 @@ from resolution import calculate_diffracion_limit as clc
 WAVELENGTHS = {"red": (670, "red"), "green": (530, "green"), "blue": (470, "blue"), "infrared": (800, "magenta")}
 DIAMETER = (8, 18)
 DISTANCES = np.arange(200, 2000, 1)
+SCENARIOS = (1, np.sin(80 / 180 * np.pi))
 
 
 def plot() -> None:
-    _, axs = plt.subplots(2, 1)
+    _, axs = plt.subplots(2, 2)
 
     for i, d in enumerate(DIAMETER):
-        for label, (wl, color) in WAVELENGTHS.items():
-            axs[i].plot(DISTANCES, clc(wl, DISTANCES, d), label=label, color=color)
-        axs[i].set_title(f"Diffraction limit of lens for lens diameter {d} [km]")
-        axs[i].set_xlabel("Distance [km]")
-        axs[i].set_ylabel("Diffraction limit [m]")
-        axs[i].legend()
+        for j, s in enumerate(SCENARIOS):
+            for label, (wl, color) in WAVELENGTHS.items():
+                axs[j][i].plot(DISTANCES / s, clc(wl, DISTANCES / s, d), label=label, color=color)
+            axs[j][i].set_title(f"Diffraction limit of lens for lens diameter {d} [km] for scenario {j+1}")
+            axs[j][i].set_xlabel("Distance [km]")
+            axs[j][i].set_ylabel("Diffraction limit [m]")
+            axs[j][i].legend()
 
     plt.show()  # used to block after plot so script does not exit to early
 
