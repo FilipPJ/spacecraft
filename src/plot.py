@@ -1,12 +1,13 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import math
 
 from resolution import calculate_diffracion_limit as clc
 
 WAVELENGTHS = {"red": (670, "red"), "green": (530, "green"), "blue": (470, "blue"), "infrared": (800, "magenta")}
 DIAMETER = (8, 18)
 DISTANCES = np.arange(200, 2000, 1)
-SCENARIOS = (1, np.sin(80 / 180 * np.pi))
+SCENARIOS = (1, np.sin(math.degrees(80)))
 
 
 def plot() -> None:
