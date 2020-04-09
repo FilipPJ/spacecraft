@@ -17,7 +17,7 @@ def plot() -> None:
         for j, s in enumerate(SCENARIOS):
             for label, (wl, color) in WAVELENGTHS.items():
                 axs[j][i].plot(DISTANCES / s, clc(wl, DISTANCES / s, d), label=label, color=color)
-            axs[j][i].set_title(f"Diffraction limit of lens for lens diameter {d} [km] for scenario {j+1}")
+            axs[j][i].set_title(f"Diffraction limit of lens for lens diameter {d} [cm] for scenario {j+1}")
             axs[j][i].set_xlabel("Distance [km]")
             axs[j][i].set_ylabel("Diffraction limit [m]")
             axs[j][i].legend()
