@@ -20,7 +20,7 @@ _*resolution.py*_ - calculates diffraction limit
 
 _*plot.py*_ - plots 4 different plots (for different combination of lense diameters and scenarios) and included the legend.
  
- 
+![diff_limit](fig/diffraction_limits.png)
  
 (1) Diffraction limit - the minimum angular separation of two sources that can be distinguished by a telescope depends on the wavelength 
 of the light being observed and the diameter of the telescope. 
