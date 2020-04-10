@@ -7,7 +7,7 @@ from resolution import calculate_diffracion_limit as clc
 WAVELENGTHS = {"red": (670, "red"), "green": (530, "green"), "blue": (470, "blue"), "infrared": (800, "magenta")}
 DIAMETER = (8, 18)
 DISTANCES = np.arange(200, 2000, 1)
-SCENARIOS = (1, np.sin(math.degrees(80)))
+SCENARIOS = (1, np.sin(math.radians(80)))
 
 
 def plot() -> None:
@@ -21,6 +21,7 @@ def plot() -> None:
             axs[j][i].set_xlabel("Distance [km]")
             axs[j][i].set_ylabel("Diffraction limit [m]")
             axs[j][i].legend()
+            axs[j][i].grid()
 
     plt.show()  # used to block after plot so script does not exit to early
 
