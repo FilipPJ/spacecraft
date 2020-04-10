@@ -12,13 +12,13 @@ To achieve that, we had to plot diffraction limits(1) for all the bands:
 4. near-infra red (845 nm)
 
 Additionaly, there were two different telescope diameters (8cm and 18cm). 
-There are two scenarios present - when the satelite is pointing straight down(best case) and when it is tilted,
+There are two scenarios present - when the satellite is pointing straight down(best case) and when it is tilted,
 but not more than 10 degrees (worst case).
 
 There are 2 files included:
 _*resolution.py*_ - calculates diffraction limit 
 
-_*plot.py*_ - plots 4 different plots (for different combination of lense diameters and scenarios) and icludes the legend.
+_*plot.py*_ - plots 4 different plots (for different combination of lense diameters and scenarios) and included the legend.
  
  
  
